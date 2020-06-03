@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sample Blog</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container ">
+            <a class="navbar-brand text-white" href="#">Sample Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="post.html">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Todos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid bg-info text-white" style="background-image: url('img/blog.png'); background-size: cover; height: 450px;">
+        <div class="container pt-5">
+            <h1 class="display-1 text-center">Sample Blog</h1>
+            <p class="lead text-center">Using <u><a class="text-white" href= "https://jsonplaceholder.typicode.com">JSONPlaceholder</a></u> Which is a free online REST API that can use whenever need some fake data.</p>
+        </div>
+    </div>
+
+    <section class="col-lg-8 col-md-10 mx-auto">
+
+        <h1>Posts</h1>
+
+
+
+        <div class="container">
+            <div class="pageloader"></div>
+            <div class="row" id="cardId">
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <br>
+
+    <section class="col-lg-8 col-md-10 mx-auto">
+
+        <h1>Photos</h1>
+
+
+
+        <div class="container">
+            <div class="pageloader"></div>
+            <div class="row" id="photoId">
+            </div>
+        </div>
+
+
+    </section>
+
+    <br>
+
+    <section class="col-lg-8 col-md-10 mx-auto">
+
+        <h1>Todos</h1>
+
+
+        <div class="container">
+            <div class="pageloader"></div>
+            <div class="row">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Todo Id</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todoId">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </section>
+
+    <hr>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <p class="copyright text-muted text-center">Copyright &copy; Your Website 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
