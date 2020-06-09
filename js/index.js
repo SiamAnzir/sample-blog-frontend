@@ -1,10 +1,6 @@
 $(document).ready(function() {
 
-<<<<<<< HEAD
     $.ajax({
-=======
-	$.ajax({
->>>>>>> 5630876b035f8849a11a9fb143b902f2eef24d04
         method: 'GET',
         url: 'https://jsonplaceholder.typicode.com/posts'
     }).done(function(post) {
@@ -15,11 +11,7 @@ $(document).ready(function() {
     });
 
 
-<<<<<<< HEAD
     $.ajax({
-=======
-     $.ajax({
->>>>>>> 5630876b035f8849a11a9fb143b902f2eef24d04
         method: 'GET',
         url: 'https://jsonplaceholder.typicode.com/todos'
     }).done(function(todo) {
@@ -47,25 +39,16 @@ $(document).ready(function() {
         $(".pageloader").fadeOut("slow");
 
         let singlePostCard = "";
-<<<<<<< HEAD
         for (let i = 0; i < 5; i++) {
             singlePostCard = singlePostCard +
                 '<div class="col-lg-4 col-md-6 col-sm-12" >' +
                 '<div class="card border-dark mb-3" style="height:320px;width:250px">' +
                 '<h4 class="card-header"><b>' + posts[i].title.substr(0, 30) + '</b></h4>' +
-=======
-        for (let i = 1; i < 5; i++) {
-            singlePostCard = singlePostCard + 
-            '<div class="col-lg-4 col-md-6 col-sm-12" >' +
-                '<div class="card" style="height:320px;width:250px">' +
-                	'<h4 class="card-header"><b>' + posts[i].title.substr(0, 30) + '</b></h4>' +
->>>>>>> 5630876b035f8849a11a9fb143b902f2eef24d04
                 '<div class="card-body">' +
-                	'<h5 class="card-title"><b> Description</b></h5>' +
-                	'<p class="card-text">' + posts[i].body.substr(0, 80) + '.........' + '</p>' +
+                '<h5 class="card-title"><b> Description</b></h5>' +
+                '<p class="card-text">' + posts[i].body.substr(0, 80) + '.........' + '</p>' +
                 '</div>' +
                 '<div class="card-footer">' +
-<<<<<<< HEAD
                 '<button type="button"+ data-id="' + i + '" class="btn btn-primary" id="btn"  data-toggle="modal" data-target="#myModal">Read More</button>' +
                 '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
                 '<div class="modal-dialog" role="document">' +
@@ -82,14 +65,10 @@ $(document).ready(function() {
                 '</div>' +
                 '</div>' +
                 '</div>' +
-=======
-                	'<button type="button"+ data-id="'+i+'" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal">Read More</button>' +
->>>>>>> 5630876b035f8849a11a9fb143b902f2eef24d04
                 '</div>' +
                 '</div>' +
-            '</div>';
+                '</div>';
         }
-<<<<<<< HEAD
 
         $("#postContainer").html(singlePostCard);
 
@@ -109,16 +88,6 @@ $(document).ready(function() {
         $(".pageloader").fadeOut("slow");
         let singlePhoto = "";
 
-=======
-        $("#postContainer").html(singlePostCard);
-    }
-   
-    
-    function getUserPhotosUi(photos) {
-        $(".pageloader").fadeOut("slow");
-        let singlePhoto = "";
-        
->>>>>>> 5630876b035f8849a11a9fb143b902f2eef24d04
         for (let i = 0; i < 6; i++) {
             singlePhoto = singlePhoto + '<div class="col-lg-4 col-md-6 col-sm-12" >' +
                 '<div class="card-group">' +
@@ -139,22 +108,13 @@ $(document).ready(function() {
 
         $("#photoContainer").html(singlePhoto);
     }
-<<<<<<< HEAD
 
 
-=======
-   
-    
->>>>>>> 5630876b035f8849a11a9fb143b902f2eef24d04
 
     function getUserTodosUi(todos) {
         $(".pageloader").fadeOut("slow");
         let singleTodo = "";
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 5630876b035f8849a11a9fb143b902f2eef24d04
         for (let i = 0; i < 10; i++) {
 
             singleTodo = singleTodo + '<tr>' +
@@ -172,9 +132,5 @@ $(document).ready(function() {
 
         $("#todoContainer").html(singleTodo);
     }
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> 5630876b035f8849a11a9fb143b902f2eef24d04
 });
