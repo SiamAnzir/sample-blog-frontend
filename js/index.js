@@ -15,7 +15,6 @@ $(document).ready(function() {
         method: 'GET',
         url: 'https://jsonplaceholder.typicode.com/todos'
     }).done(function(todo) {
-        console.log(todo);
 
         getUserTodosUi(todo);
     }).fail(function(error) {
@@ -27,7 +26,6 @@ $(document).ready(function() {
         method: 'GET',
         url: 'https://jsonplaceholder.typicode.com/photos'
     }).done(function(photo) {
-        console.log(photo[0]);
 
         getUserPhotosUi(photo);
     }).fail(function(error) {
@@ -42,15 +40,15 @@ $(document).ready(function() {
         for (let i = 0; i < 5; i++) {
             singlePostCard = singlePostCard +
                 '<div class="col-lg-4 col-md-6 col-sm-12" >' +
-                '<div class="card border-dark mb-3" style="height:320px;width:250px">' +
+                '<div class="card text-white bg-dark mb-3" style="height:320px;width:250px">' +
                 '<h4 class="card-header"><b>' + posts[i].title.substr(0, 30) + '</b></h4>' +
                 '<div class="card-body">' +
                 '<h5 class="card-title"><b> Description</b></h5>' +
                 '<p class="card-text">' + posts[i].body.substr(0, 80) + '.........' + '</p>' +
                 '</div>' +
                 '<div class="card-footer">' +
-                '<button type="button"+ data-id="' + i + '" class="btn btn-primary" id="btn"  data-toggle="modal" data-target="#myModal">Read More</button>' +
-                '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
+                '<button type="button"+ data-id="' + i + '" class="btn btn-primary" id="btn"  data-toggle="modal" data-target="#postModal">Read More</button>' +
+                '<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
                 '<div class="modal-dialog" role="document">' +
                 '<div class="modal-content">' +
                 '<div class="modal-header">' +
@@ -75,9 +73,9 @@ $(document).ready(function() {
 
         $(".card-footer").on("click", "button", function() {
             var bid = $(this).attr("data-id");
-            $('.modal-title').html(posts[bid].title);
+            $('.modal-title').html("<b> Title: </b> " + posts[bid].title);
             $('.modal-body').html("<b> Description: </b>" + posts[bid].body);
-            $('#myModal').modal('show');
+            $('#postModal').modal('show');
         });
     }
 

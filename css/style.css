@@ -15,12 +15,13 @@ a:hover {
     color: whitesmoke;
 }
 
+html,
 body {
-    font-family: 'Lora', 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.card-footer button {
-    float: right;
+#btn {
+    width: 100%;
 }
 
 .pageloader {
@@ -38,4 +39,10 @@ body {
     height: 120px;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
+}
+
+.modal-title,
+.modal-body {
+    color: black;
+    font-size: large;
 }
